@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D1A46EFD-344E-4388-9695-4A670008C207}</ProjectGuid>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>uioCamv21</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;BOOST_FILESYSTEM_NO_DEPRECATED;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\cpp_libraries\ImageMagick\ImageMagick-7.0.10-Q16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;CORE_RL_Magick++_.lib;CORE_RL_MagickCore_.lib;CORE_RL_MagickWand_.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\cpp_libraries\ImageMagick\ImageMagick-7.0.10-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;BOOST_FILESYSTEM_NO_DEPRECATED;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\cpp_libraries\ImageMagick\ImageMagick-7.0.10-Q16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;CORE_RL_Magick++_.lib;CORE_RL_MagickCore_.lib;CORE_RL_MagickWand_.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\cpp_libraries\ImageMagick\ImageMagick-7.0.10-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="astroIo.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="func.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="modes.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="photosIo.cpp" />
+    <ClCompile Include="sequence.cpp" />
+    <ClCompile Include="smartMotorIo.cpp" />
+    <ClCompile Include="sonyCameraIo.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="strings.cpp" />
+    <ClCompile Include="uioCam_v2.1.cpp" />
+    <ClCompile Include="yAstro_aa_hadec.cpp" />
+    <ClCompile Include="yAstro_aberration.cpp" />
+    <ClCompile Include="yAstro_actan.cpp" />
+    <ClCompile Include="yAstro_anomaly.cpp" />
+    <ClCompile Include="yAstro_ap_as.cpp" />
+    <ClCompile Include="yAstro_auxil.cpp" />
+    <ClCompile Include="yAstro_bdl.cpp" />
+    <ClCompile Include="yAstro_chap95.cpp" />
+    <ClCompile Include="yAstro_chap95_data.cpp" />
+    <ClCompile Include="yAstro_circum.cpp" />
+    <ClCompile Include="yAstro_comet.cpp" />
+    <ClCompile Include="yAstro_deep.cpp" />
+    <ClCompile Include="yAstro_deltat.cpp" />
+    <ClCompile Include="yAstro_earthsat.cpp" />
+    <ClCompile Include="yAstro_eq_ecl.cpp" />
+    <ClCompile Include="yAstro_jupmoon.cpp" />
+    <ClCompile Include="yAstro_marsmoon.cpp" />
+    <ClCompile Include="yAstro_misc.cpp" />
+    <ClCompile Include="yAstro_mjd.cpp" />
+    <ClCompile Include="yAstro_moon.cpp" />
+    <ClCompile Include="yAstro_nutation.cpp" />
+    <ClCompile Include="yAstro_obliq.cpp" />
+    <ClCompile Include="yAstro_parallactic.cpp" />
+    <ClCompile Include="yAstro_parallax.cpp" />
+    <ClCompile Include="yAstro_plans.cpp" />
+    <ClCompile Include="yAstro_plmoon.cpp" />
+    <ClCompile Include="yAstro_plshadow.cpp" />
+    <ClCompile Include="yAstro_precess.cpp" />
+    <ClCompile Include="yAstro_reduce.cpp" />
+    <ClCompile Include="yAstro_refract.cpp" />
+    <ClCompile Include="yAstro_rings.cpp" />
+    <ClCompile Include="yAstro_satmoon.cpp" />
+    <ClCompile Include="yAstro_sdp4.cpp" />
+    <ClCompile Include="yAstro_sgp4.cpp" />
+    <ClCompile Include="yAstro_sphcart.cpp" />
+    <ClCompile Include="yAstro_sun.cpp" />
+    <ClCompile Include="yAstro_thetag.cpp" />
+    <ClCompile Include="yAstro_twobody.cpp" />
+    <ClCompile Include="yAstro_umoon.cpp" />
+    <ClCompile Include="yAstro_utc_gst.cpp" />
+    <ClCompile Include="yAstro_vsop87.cpp" />
+    <ClCompile Include="yAstro_vsop87_data.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="astroIo.h" />
+    <ClInclude Include="define.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="include.h" />
+    <ClInclude Include="Isutil.h" />
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="sonyCamera.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="yAstro_astro.h" />
+    <ClInclude Include="yAstro_bdl.h" />
+    <ClInclude Include="yAstro_chap95.h" />
+    <ClInclude Include="yAstro_deepconst.h" />
+    <ClInclude Include="yAstro_preferences.h" />
+    <ClInclude Include="yAstro_satlib.h" />
+    <ClInclude Include="yAstro_satspec.h" />
+    <ClInclude Include="yAstro_sattypes.h" />
+    <ClInclude Include="yAstro_vector.h" />
+    <ClInclude Include="yAstro_vsop87.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
