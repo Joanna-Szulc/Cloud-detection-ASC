@@ -28,8 +28,8 @@ def create_dir_year(year1, year2):
     diff = abs(year2 - year1)
     for i in range(diff + 1):
         year = year1 + i
-        dirData = f'./data/{year}'
-        if not os.path.exists(f'./data/{year}'):
+        dirData = f'./data/Radiosonde/{year}'
+        if not os.path.exists(f'./data/Radiosonde/{year}'):
             os.mkdir(dirData)
 
 
@@ -529,7 +529,4 @@ def run(year1, month1, day1, year2, month2, day2, min_height, max_height, MET_si
                 file_names = download_period(year1, month1, year2, month2, True, MET_site_name)
                 data = calculate_period(year1, month1, day1, year2, month2, day2, file_names, min_height, max_height, MET_site_name)
                 return data
-
-
-MET_site_name = 'andoya'
-run('2017', '08', '24', '2017', '08', '24', 0, 50000, MET_site_name)
+            

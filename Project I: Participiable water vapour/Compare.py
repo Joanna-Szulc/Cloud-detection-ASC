@@ -25,6 +25,23 @@ import matplotlib.pyplot as plt
 import datetime
 import Radiosonde as rs
 import CIMEL as C
+import os
+
+
+# Create target directories if they don't exist
+def create_dir():
+    dirData = f'./data/'
+    if not os.path.exists(f'./data/'):
+        os.mkdir(dirData)
+    dirPlots = f'./plots/'
+    if not os.path.exists(f'./plots/'):
+        os.mkdir(dirPlots)
+    dirDataRadiosonde = f'./data/Radiosonde/'
+    if not os.path.exists(f'./data/Radiosonde/'):
+        os.mkdir(dirDataRadiosonde)
+    dirDataCIMEL = f'./data/CIMEL'
+    if not os.path.exists(f'./data/CIMEL'):
+        os.mkdir(dirDataCIMEL)
 
 
 #  plots all available data for CIMEL and Radiosonde without any additional averaging
@@ -61,13 +78,13 @@ def plot_all(data_CIMEL, data_Radiosonde, year1, month1, day1, year2, month2, da
     fig.suptitle(title, fontsize=12)
     plt.subplots_adjust(top=0.87)
     plt.show()
-    save = f'./plots/Compare/{year1}/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all.png'
+    save = f'./plots/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all.png'
     plt.savefig(save, bbox_inches='tight')
 
-    save = f'./plots/Compare/{year1}/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all_CIMEL.csv'
+    save = f'./plots/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all_CIMEL.csv'
     data_CIMEL.to_csv(save)
     
-    save = f'./plots/Compare/{year1}/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all_Radiosonde.csv'
+    save = f'./plots/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_all_Radiosonde.csv'
     data_CIMEL.to_csv(save)
     
     
@@ -103,7 +120,7 @@ def plot_coincident(data, year1, month1, day1, year2, month2, day2, launch_place
     fig.suptitle(title, fontsize=12)
     plt.subplots_adjust(top=0.87)
     plt.show()
-    save = f'./plots/Compare/{year1}/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_coincident.png'
+    save = f'./plots/Andenes_{year1}{month1}{day1}-{year2}{month2}{day2}_coincident.png'
     plt.savefig(save, bbox_inches='tight')
 
     save = save.replace('.png', '.csv')
@@ -148,7 +165,7 @@ def plot_histogram(data, year1, month1, day1, year2, month2, day2, launch_place)
     fig.suptitle(title, fontsize=12)
     plt.subplots_adjust(top=0.87)
     plt.show()
-    save = f'./plots/Compare/{year1}/Andenes_{year1}{month1}{day1}-\
+    save = f'./plots/Andenes_{year1}{month1}{day1}-\
     {year2}{month2}{day2}_histogram.png'
     plt.savefig(save, bbox_inches='tight')
 
@@ -158,6 +175,8 @@ def plot_histogram(data, year1, month1, day1, year2, month2, day2, launch_place)
 
 def compare_latest(year1, month1, day1, min_height, max_height, MET_site_name,
                    AEROnet_site_name, daily_averages):
+    create_dir()
+    
     now = datetime.datetime.now()
     year2 = str(now.year)
     month2 = now.month
@@ -204,6 +223,8 @@ def compare_latest(year1, month1, day1, min_height, max_height, MET_site_name,
 def compare_period(year1, month1, day1, year2, month2, day2,
                    min_height, max_height,
                    MET_site_name, AEROnet_site_name, daily_averages):
+    create_dir()
+    
     data_CIMEL = C.run_CIMEL(year1, month1, day1, year2, month2, day2,
                              AEROnet_site_name, daily_averages)
     
@@ -232,11 +253,11 @@ def compare_period(year1, month1, day1, year2, month2, day2,
 
 
 year1 = '2019'
-month1 = '02'
-day1 = '15'
+month1 = '01'
+day1 = '01'
 year2 = '2019'
-month2 = '03'
-day2 = '11'
+month2 = '12'
+day2 = '31'
 AEROnet_site_name = 'Andenes'
 MET_site_name = 'andoya'
 min_height = 376
