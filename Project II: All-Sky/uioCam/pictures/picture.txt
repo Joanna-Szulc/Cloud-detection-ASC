@@ -1,0 +1,1 @@
+Here Remote will save files in subfolder /last, ICE will pick up needed files from here for processing and everything else. The exact order of events and names of files depends on ICE.py and uioCam.
