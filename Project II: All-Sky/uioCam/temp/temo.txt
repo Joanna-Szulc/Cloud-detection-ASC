@@ -1,0 +1,1 @@
+Here uioCam will stash its temporary files.
