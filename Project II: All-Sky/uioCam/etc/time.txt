@@ -1,0 +1,10 @@
+# Camera on off times
+#
+# The camera will not run if it is outside these times
+#
+2010-07-12 15:00:00 2010-07-12 15:05:00
+#
+2013-10-01 02:00:00 2015-03-03 03:00:00
+#
+# Last line
+2018-06-01 00:00:00 2029-12-31 23:59:59

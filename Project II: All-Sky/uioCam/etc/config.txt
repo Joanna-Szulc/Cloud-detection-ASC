@@ -1,0 +1,169 @@
+#
+#  ####    ####   #    #  ######     #     ####            #####  #    #   #####
+# #    #  #    #  ##   #  #          #    #    #             #     #  #      #
+# #       #    #  # #  #  #####      #    #                  #      ##       #
+# #       #    #  #  # #  #          #    #  ###   ###       #      ##       #
+# #    #  #    #  #   ##  #          #    #    #   ###       #     #  #      #
+#  ####    ####   #    #  #          #     ####    ###       #    #    #     #
+#
+#
+# config.txt
+#
+# Set values to be used in uioCam.
+# Do not change any parameter names without changing the belonging code.
+# Make sure to have space between the parameter name and the value.
+#
+############################################# set for Sony A73
+#
+WRITE_LOG: 1
+DEBUG_ON: 1
+CHECK_SMARTMOTOR: 0
+#
+#############################################
+#
+# Defines the software library used, (max 64 characters)
+#
+LIBRARY:
+COMMENT: This camera is properly set for the Andoya Saura location.
+#
+# No norwegian charcters.
+# _SHORT is for graphic interface, and _LONG is for png files. 
+#
+STATION_SHORT: Andoya Norway
+STATION_LONG: Andoya, (Saura), Norway
+#
+# Three letter code, example: NYA
+#
+CODE: AND
+#
+# From http://kart.statkart.no/
+#  69 grader 8 minutter og 22 sekunder nord,
+#  16 grader 2 minutter og 21 sekunder øst.
+#  Place is: Saura i Andøy kommune.
+#
+#     69 + 8/60 + 22/(60*60) = 69.1394444444445
+#     16 + 2/60 + 21/(60*60) = 16.0391666666667
+#
+# Altitude is in meter [m]
+#
+LAT: 69.14
+LONG: 16.04
+ALT: 15.0
+#
+###############################################################
+#
+CAMERANAME: ASI-4 , (Andoya)
+CAMERANUMBER: 4
+#
+FILTERNO: 5
+FILTER1: open
+FILTER2: open
+FILTER3: open
+FILTER4: open
+FILTER5: open
+#
+WAVELEN1: 0.0
+WAVELEN2: 0.0
+WAVELEN3: 0.0
+WAVELEN4: 0.0
+WAVELEN5: 0.0
+#
+#
+RADIUS: 216
+R_CENTER: 256
+C_CENTER: 244
+LENS_FOV: 180.0
+FLIP_UD: 1
+CAM_ROLL: 279.0
+CAM_PITCH: 0.0
+CAM_YAW: 0.0
+MAG_BEARING: -33.0
+PROJECTION: unknown
+CALIB_FILENAME: none.txt
+#
+#
+SHUTTER_STAY_OPEN: 20000
+#
+DUMP_BMP: 0
+#
+#
+####################################################################
+#
+# RS-232 port for the smartmotor,  1 for COM1, 2 for COM2 etc..
+# When it is set to 0, it is not set
+#
+SMARTMOTOR_PORT: 1
+#
+#
+#####################################################################
+#
+# The RUN_SMARTMOTOR: 0 and RUN_CAMERA: 0 settings are used for testing
+# 
+# RUN_SMARTMOTOR;
+#     0: smartmotor is not run (default)
+#     1: smartmotor is run (filter, shutter,...)
+#
+RUN_SMARTMOTOR: 1
+#
+# RUN_CAMERA;
+#     0: camera is not run (default)
+#     1: camera is run
+#
+RUN_CAMERA: 1
+#
+#
+##################################################
+#
+# New functionality in uioCam v2.0
+#
+#
+# Options for MANUAL:
+#	0: start up in auto, let predefined program run
+#	1: start up in manual, control everything yourself
+#
+MANUAL: 0
+#
+#
+# START_SEC 	is the second the first picture will be taken
+#		if start_sec: -1 it will start at the next second (gives default start at sec: 1) 
+# START_MIN 	is the minute the first picture will be taken
+#		if start_min: -1 it will start at the next minute
+#
+START_SEC: 0
+START_MIN: -1
+#
+#
+# Options for RUN_MODE:
+# 	0: normal mode
+# 	1: cloud detection mode
+#
+RUN_MODE: 0
+#
+#
+# Options for INTENSITY_CONTROL:
+#	0: off, use auto settings from camera (requires camera in auto mode)
+#	1: on, use intensity control from uioCam (requires camera in manual mode)
+#
+# INTERVAL	is the interval between each picture in [s]
+#
+# Options for POST_PROCESS:
+#	0: off, only save pictures
+#	1: on, postprocess pictures, save compressed, cropped version, cloud mask and map projection
+# -- Normal mode: --
+#
+INTERVAL: 30
+FILTER: 1
+INTENSITY_CONTROL: 0
+POST_PROCESS: 0
+#
+# -- Cloud detection mode: --
+#
+CLOUD_INTERVAL: 60
+CLOUD_FILTER: 1
+CLOUD_INTENSITY_CONTROL: 1
+CLOUD_POST_PROCESS: 0
+#
+#
+# MAX. SUN AND MOON ELEVATION WAS DELETED: Normal mode will run regardless of the Sun and Moon position,
+# Cloud detection mode will adjust ISO accordingly to the Sun and Moon position automatically.
+###################################################
