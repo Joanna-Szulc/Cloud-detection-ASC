@@ -1,0 +1,1 @@
+Here should be ICE.exe file created by putting ICE.py through auto-py-tp-exe packaged after making sure that all paths in ICE.py and uioCam are compatible with eahc other and the computer on which uioCam is to be compiled.
