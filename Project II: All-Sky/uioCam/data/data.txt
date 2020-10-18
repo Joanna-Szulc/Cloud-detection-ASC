@@ -1,1 +1,1 @@
-In this folder uioCam will save its logs.
+In this folder uioCam will save its data files.
