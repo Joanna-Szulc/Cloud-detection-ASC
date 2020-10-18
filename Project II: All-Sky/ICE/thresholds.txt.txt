@@ -1,0 +1,6 @@
+dark_down = 0
+dark_up = 50
+grey_down = 51
+grey_up = 140
+bright_down = 141
+bright_up = 255
